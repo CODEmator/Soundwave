@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <section class="hero" >
+    <section class="hero" id="homepage" >
         <header>
             <nav class="navbar">
-                <a class="logobar" href="./index.html">
+                <a class="logobar" href="#homepage">
                     <img src="./assets/logo.svg" alt="SoundWave's Logo">
                     <h1>Soundwave</h1>
                 </a>
                 <nav>
                     <ul>
-                        <li><a href="">Discover</a></li>
+                        <li><a href="#discover">Discover</a></li>
                         <li><a href="">Join</a></li>
                     </ul>
                 </nav>
@@ -39,29 +39,28 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="discover">
         <div class="container">
-            <div>
-                <h1>Discover New Music</h1>
-            </div>
-            <div>
+            <div class="innerContainer">
                 <div class="left">
-                    <div class="chart">
-                        <img src="./assets/image1.svg" alt="">
-                        <h2>Charts</h2>
-                    </div>
-                    <div class="album">
-                        <img src="./assets/image2.svg" alt="">
-                        <h2>Album</h2>
-                    </div>
-                    <div class="more">
-                        <img src="./assets/image3.svg" alt="">
-                        <h2>More</h2>
+                    <h1>Discover New Music</h1>
+                    <div class="gridbox">
+                        <div class="grid">
+                            <img src="./assets/headphones.svg" alt="">
+                            <h2>Charts</h2>
+                        </div>
+                        <div class="grid">
+                            <img src="./assets/album.svg" alt="">
+                            <h2>Album</h2>
+                        </div>
+                        <div class="grid">
+                            <img src="./assets/expand_circle.svg" alt="">
+                            <h2>More</h2>
+                        </div>
                     </div>
                     <h2>
-                        “If I were not a physicist, I would probably be a musician.
-                        I often think in music. I live my daydreams in music. 
-                        I see my life in terms of music.” ― Albert Einstein
+                        “Music gives a soul to the universe, wings to the <br>
+                        mind, flight to the imagination and life to <br> everything.” ― Plato
                     </h2>
                 </div>
                 <div class="right">
@@ -70,6 +69,20 @@
                     </div>
                 </div>
             </div>
+            <footer>
+               <nav>
+                    <ul>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                    <div class="socialicon">
+                        <img src="./assets/facebook.png" alt="">
+                        <img src="./assets/twitter.png" alt="">
+                        <img src="./assets/instagram.png" alt="">
+                    </div>
+               </nav> 
+               <p>Copyright &copy; 2022 by Soundwave. All Rights Reserved.</p>
+            </footer>
         </div>
     </section>
 </body>
