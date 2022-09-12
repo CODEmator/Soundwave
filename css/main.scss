@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;0,900;1,400&display=swap');
+
+body {
+    background-color: #1762A7;
+    font-family: 'Poppins', 'sans-serif';
+    margin: 0;
+    padding: 1.2em;
+}
+
+section {
+    height: 100vh;
+}
+
+
+header {
+    display: block;
+    margin-top: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 1.3em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .logobar {
+        display: flex;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        
+        h1 {
+            padding-left: 10px;
+            font-size: 36px;
+        }
+    }
+}
+
+ul {
+    display: flex;
+    padding-right: 1.8em;
+
+    li {
+        list-style: none;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        a {
+            text-decoration: none;
+            padding-left: 20px;
+            font-size: 32px;
+            color: #ffffff;
+        }
+    }
+}
+
+.hero {
+
+    .container {
+        display: flex;
+
+        .left {
+    
+            .heroimg {
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                padding-left: 80px;
+                padding-top: 89px;
+                width: 75%;
+            }
+
+            .design1 {
+                position: absolute;
+                top: 785px;
+                right: 996px;
+                z-index: -1;
+            }
+        }
+
+        .right {
+            color: #ffffff;
+
+            .headphone {
+                position: absolute;
+                z-index: -1;
+                width: 339px;
+                padding-top: 118px;
+                padding-left: 630px;
+
+                &:hover {
+                    border: solid 3px #0a80ef;
+                }
+            }
+
+            .herotext {
+                text-align: left;
+                padding-top: 110px;
+                padding-left: 315px;
+                
+                h1 {
+                    font-size: 72px;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    font-size: 34px;
+                    margin-top: .3em;
+                }
+
+                a {
+                    background-color: #000000;
+                    font-size: 20px;
+                    padding: 25px 60px;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+
+                    &:hover {
+                        padding: 20px 55px;
+                        border: solid 3px #0a80ef;
+                    }
+                }
+            }
+
+            .design2 {
+                position: absolute;
+                left: 1468px;
+                top: 470px;
+                z-index: -2;
+                height: 490px;
+                width: 452px;
+            }
+        }
+    }
+}
+

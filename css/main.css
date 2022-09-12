@@ -1,1 +1,112 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;0,900;1,400&display=swap");
+body {
+  background-color: #1762A7;
+  font-family: "Poppins", "sans-serif";
+  margin: 0;
+  padding: 1.2em;
+}
+
+section {
+  height: 100vh;
+}
+
+header {
+  display: block;
+  margin-top: 0;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: 1.3em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .logobar {
+  display: flex;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+}
+.navbar .logobar h1 {
+  padding-left: 10px;
+  font-size: 36px;
+}
+
+ul {
+  display: flex;
+  padding-right: 1.8em;
+}
+ul li {
+  list-style: none;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+ul li a {
+  text-decoration: none;
+  padding-left: 20px;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.hero .container {
+  display: flex;
+}
+.hero .container .left .heroimg {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding-left: 80px;
+  padding-top: 89px;
+  width: 75%;
+}
+.hero .container .left .design1 {
+  position: absolute;
+  top: 785px;
+  right: 996px;
+  z-index: -1;
+}
+.hero .container .right {
+  color: #ffffff;
+}
+.hero .container .right .headphone {
+  position: absolute;
+  z-index: -1;
+  width: 339px;
+  padding-top: 118px;
+  padding-left: 630px;
+}
+.hero .container .right .headphone:hover {
+  border: solid 3px #0a80ef;
+}
+.hero .container .right .herotext {
+  text-align: left;
+  padding-top: 110px;
+  padding-left: 315px;
+}
+.hero .container .right .herotext h1 {
+  font-size: 72px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.hero .container .right .herotext p {
+  font-size: 34px;
+  margin-top: 0.3em;
+}
+.hero .container .right .herotext a {
+  background-color: #000000;
+  font-size: 20px;
+  padding: 25px 60px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.hero .container .right .herotext a:hover {
+  padding: 20px 55px;
+  border: solid 3px #0a80ef;
+}
+.hero .container .right .design2 {
+  position: absolute;
+  left: 1468px;
+  top: 470px;
+  z-index: -2;
+  height: 490px;
+  width: 452px;
+}/*# sourceMappingURL=main.css.map */
