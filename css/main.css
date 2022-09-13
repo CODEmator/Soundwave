@@ -5,12 +5,20 @@ body {
   margin: 0;
   padding: 1.2em;
   padding-bottom: 0;
+  height: 80vh;
+  box-sizing: border-box;
 }
 
 section {
-  height: 100vh;
+  height: 75vh;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 header {
@@ -47,16 +55,23 @@ ul li {
 }
 ul li a {
   text-decoration: none;
-  padding-left: 20px;
+  padding: 10px;
   font-size: 32px;
   color: #ffffff;
+  text-align: center;
+}
+ul li a:hover {
+  background-color: rgba(69, 158, 242, 0.4980392157);
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .hero {
-  height: 100vh;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  margin-bottom: -1em;
   padding-bottom: 0;
+  position: static;
 }
 .hero .container {
   display: flex;
@@ -121,20 +136,33 @@ ul li a {
 }
 
 .about {
-  height: 100vh;
-  margin-bottom: 0;
+  margin: 0;
+  margin-bottom: -1em;
   margin-top: 0;
   padding-bottom: 0;
+  position: static;
 }
 .about .innerContainer {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
   margin-left: 200px;
-  margin-bottom: 110px;
+  margin-bottom: 90px;
 }
 .about .innerContainer .left {
   display: block;
+}
+.about .innerContainer .left .design3 {
+  position: absolute;
+  margin-left: 350px;
+  margin-top: -50px;
+  z-index: -1;
+}
+.about .innerContainer .left .design4 {
+  position: absolute;
+  right: 1447px;
+  margin-top: 320px;
+  z-index: -1;
 }
 .about .innerContainer .left h1 {
   font-size: 36px;
@@ -164,31 +192,121 @@ ul li a {
   margin-right: 200px;
   margin-top: 60px;
 }
-.about footer {
+.about .innerContainer .right .design5 {
+  position: absolute;
+  z-index: -2;
+  width: 400px;
+  margin-left: 344px;
+  margin-top: -120px;
+}
+
+footer {
   display: block;
   margin: -1.2em;
   padding: 10px;
   padding-top: 5px;
-  margin-top: 110px;
-  background: rgba(255, 255, 255, 0.18);
+  margin-top: 100px;
   text-align: center;
   margin-bottom: 0;
+  padding-bottom: -5px;
 }
-.about footer nav {
+footer nav {
   display: flex;
   justify-content: space-between;
 }
-.about footer nav .socialicon {
+footer nav .socialicon {
   display: flex;
   width: 10%;
 }
-.about footer nav .socialicon img {
+footer nav .socialicon img {
   width: 38px;
   height: 38px;
   padding: 5px;
 }
-.about footer p {
+footer p {
   font-size: 22px;
   margin-bottom: 0%;
   padding-bottom: 10px;
+}
+
+.join {
+  display: block;
+  margin: -1.2em;
+  width: 100vw;
+  background: linear-gradient(180deg, #1762A7 40%, #000000 90%);
+}
+.join .container {
+  display: flex;
+  flex-direction: row;
+  margin: 80px;
+  margin-bottom: 57px;
+  color: #ffffff;
+  padding: 0;
+}
+.join .container .text {
+  margin-top: 10%;
+  width: 50%;
+  font-size: 48px;
+  text-align: center;
+  place-content: center;
+}
+.join .container .text span {
+  color: #BC3A80;
+}
+.join .container form {
+  width: 35%;
+  background-color: #000000;
+  padding: 60px;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  align-content: center;
+  border-radius: 10px;
+}
+.join .container form:hover {
+  border: #0a80ef solid;
+}
+.join .container form input {
+  width: 90%;
+  height: 60px;
+  border: #0a80ef solid 3px;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 20px;
+}
+.join .container form .link {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  padding-right: 45px;
+}
+.join .container form a {
+  font-size: 20px;
+  font-style: italic;
+  color: #1762A7;
+}
+.join .container form a:hover {
+  color: #BC3A80;
+  font-weight: bold;
+}
+.join .container form input[type=submit] {
+  width: 30%;
+  align-items: center;
+  background-color: #0a80ef;
+  color: #000000;
+  text-align: center;
+  margin-left: 35%;
+}
+.join .container form input[type=submit]:hover {
+  background-color: #000000;
+  color: #0a80ef;
+}
+
+.footer2 {
+  padding: 0;
+  margin: 0;
+  margin-top: -6em;
+  margin-bottom: -1.2em;
+  padding-bottom: -1.2em;
 }/*# sourceMappingURL=main.css.map */
