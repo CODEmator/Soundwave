@@ -244,6 +244,22 @@ footer {
     margin-bottom: 0;
     padding-bottom: -5px;
 
+    .homeicon {
+        justify-content: center;
+    
+        img {
+            width: 45px;
+            height: 45px;
+            align-self: center;
+        }
+
+        &:hover {
+            padding: 5px;
+            background: #459ef27f;
+            border-radius: 10px;
+        }
+    }
+
     nav {
         display: flex;
         justify-content: space-between;
@@ -256,6 +272,12 @@ footer {
                 width: 38px;
                 height: 38px;
                 padding: 5px;
+
+                &:hover {
+                    padding: 5px;
+                    background: #459ef27f;
+                    border-radius: 10px;
+                }
             }
         }
     }
