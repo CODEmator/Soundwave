@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <section class="hero" id="homepage" >
+    <section class="hero">
         <header>
-            <nav class="navbar">
-                <a class="logobar" href="#homepage">
+            <div class="navbar">
+                <a class="logobar" href="./index.html">
                     <img src="./assets/logo.svg" alt="SoundWave's Logo">
-                    <h1>Soundwave</h1>
+                    <h1 class="logotext">Soundwave</h1>
                 </a>
-                <nav>
+                <img id="menuCta" class="menu" src="./assets/menu_icon.svg" alt="">
+                
+                <nav id="mobileMenu" class="hidden">
                     <ul>
                         <li><a href="./discover.html">Discover</a></li>
                         <li><a href="./join.html">Join</a></li>
                     </ul>
                 </nav>
-            </nav>
+            </div>
         </header>
-        <div class="container">
+        <div class="container herocontainer">
             <div class="left">
                 <img class="heroimg" src="./assets/landing-page-girl_1.png" alt="">
                 <img class="design1" src="./assets/Ellipse2.svg" alt="">
@@ -32,12 +34,28 @@
                 <img class="headphone" src="./assets/Ellipse3.png" alt="Black Headphone in Circle">
                 <div class="herotext">
                     <h1>Feel The Music</h1>
-                    <p>Stream over 20k+ songs with <br> click</p>
+                    <p>Stream over 20k+ songs with <br> a click</p>
                     <a href="./join.html" class="button">Join Now</a>
                 </div>
                 <img class="design2" src="./assets/Ellipse4.svg" alt="">
             </div>
         </div>
     </section>
+    <script>
+        const mobileBtn = document.getElementById("menuCta");
+        nav = document.querySelector("nav");
+
+        mobileBtn.addEventListener("click", () => {
+            document.getElementById("menuCta").src='./assets/Menu-close.svg';
+            nav.classList.add("menu-btn");
+        });
+
+        mobileBtn.addEventListener("dblclick", () => {
+            document.getElementById("menuCta").src='./assets/menu_icon.svg'
+            nav.classList.remove("menu-btn");
+
+        })
+
+    </script>
 </body>
 </html>
