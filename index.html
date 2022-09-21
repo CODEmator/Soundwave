@@ -8,36 +8,40 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+    <div class="header">
+        <div class="header__logo">
+            <a href="./index.html"><img src="./assets/logo.svg" alt="SoundWave's Logo"></a>
+            <a class="header__logotxt" href="./index.html">Soundwave</a>
+        </div>
+        <div class="header__menuicon">
+            <img id="menuCta" //src="./assets/menu_icon.svg" alt="Mobile Menu Icon">
+        </div>
+        
+        <nav id="mobileMenu" class="header__hidden header__navigation ">
+            <ul>
+                <li><a href="./discover.html">Discover</a></li>
+                <li class="splitline">|</li>
+                <li><a class="login" href="">Login</a></li>
+                <li><a class="hero__button" href="./join.html">Join</a></li>
+            </ul>
+        </nav>
+    </div>
     <section class="hero">
-        <header>
-            <div class="navbar">
-                <a class="logobar" href="./index.html">
-                    <img src="./assets/logo.svg" alt="SoundWave's Logo">
-                    <h1 class="logotext">Soundwave</h1>
-                </a>
-                <img id="menuCta" class="menu" src="./assets/menu_icon.svg" alt="">
-                
-                <nav id="mobileMenu" class="hidden">
-                    <ul>
-                        <li><a href="./discover.html">Discover</a></li>
-                        <li><a href="./join.html">Join</a></li>
-                    </ul>
-                </nav>
+        <div class="container hero__container">
+            <div class="hero__left">
+                <div class="hero__image"></div>
+                <div class="hero__design1"></div>
             </div>
-        </header>
-        <div class="container herocontainer">
-            <div class="left">
-                <img class="heroimg" src="./assets/landing-page-girl_1.png" alt="">
-                <img class="design1" src="./assets/Ellipse2.svg" alt="">
-            </div>
-            <div class="right">
-                <img class="headphone" src="./assets/Ellipse3.png" alt="Black Headphone in Circle">
-                <div class="herotext">
+            <div class="hero__right">
+                <div class="hero__text">
                     <h1>Feel The Music</h1>
                     <p>Stream over 20k+ songs with <br> a click</p>
-                    <a href="./join.html" class="button">Join Now</a>
+                    <div>
+                        <a class="hero__button" href="./join.html">Join Now</a>
+                    </div>
                 </div>
-                <img class="design2" src="./assets/Ellipse4.svg" alt="">
+                <div class="hero__headphone"></div>
+                <div class="hero__design2"></div>
             </div>
         </div>
     </section>
