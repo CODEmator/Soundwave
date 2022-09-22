@@ -1,17 +1,21 @@
+//imported google font(Poppins)
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;0,900;1,400&display=swap');
 
+:root {
+    //color variables 
+    --background_color: #1762A7;
+    --primary_color : #ffffff ;
+    --main_color : #0a80ef ;
+    --tertiary_color : #000000; 
+}
 
-$background-color : #1762A7 ;
-$primary-color : #ffffff ;
-$main-color : #0a80ef ;
-$tertiary-color : #000000 ;
-
+//mediaquery variables
 $mobile  : 572px;
 $tablet  : 869px;
 $laptop  : 870px; 
-$desktop : 1440px;
+$desktop : 1280px;
 
-* {
+* { //removed default settings (margin/padding)
     margin: 0px 5px;
     padding: 0px;
     box-sizing: border-box;
@@ -20,8 +24,9 @@ $desktop : 1440px;
     font-size: 30px;
 }
 
+//new default body css properties 
 body {
-    background-color: $background-color;
+    background-color: var(--background_color);
     overflow: hidden;
 }
 
@@ -36,29 +41,32 @@ body {
 
 a {
     text-decoration: none;
-    color: $primary-color;
+    color: var(--primary_color);
 }
-@media  screen and (min-width: $desktop) {
-
+// css properties for desktop sites/screen sizes above 1280px
+@media screen and (min-width: $desktop) {
     body {
         display: grid;
         place-content: center;
         padding: 20px;
     }
+
     .container {
         max-width: 1920px;
         height: 100vh;
     }
+
+    //header section of the home page
     .header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        color: $primary-color;
+        color: var(--primary_color);
         max-width: 1920px;
         height: 10%;
-        margin: 2% 5%;
-
+        margin: 2%;
+    
         &__logo {
             display: flex;
             left: 5%;
@@ -66,43 +74,52 @@ a {
         &__logotxt {
             margin-top: 1vh;
         }
-
+    
         &__menuicon {
             visibility: hidden;
+            
         }
-
+    
         &__navigation {
             display: flex;
             flex-direction: row;
-
+    
             ul {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
+    
                 li{
                     list-style: none;
                     gap: 5px;
-                }
 
+                    a {
+                        &:hover {
+                            color: var(--tertiary_color);
+                        }
+                    }
+
+                }
+    
             }
         }
-    }
-
-   .hero {
+    } //header css property ends here
+    
+    //css properties for hero section of home page
+    .hero {
         margin: 0%;
-
+    
         &__container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
         }
-
+    
         &__left {
             margin-left: 5%;
         }
-
+    
         &__image {
             background-image: url(../assets/landing-page-girl_1.png);
             width: 35vw;
@@ -115,47 +132,56 @@ a {
             background-repeat: no-repeat;
             filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.50));
         }
-
+    
         &__design1 {
             position: absolute;
             background-image: url(../assets/Ellipse2.svg);
-            width: 80vw;
+            width: 70vw;
             height: 25vh;
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
             z-index: -2;
             margin-top: -20vh;
-            margin-left: -23vw;
+            left: -5%;
         }
-
+    
         &__right {
             margin-left: 0%;
-            margin-right: 11%;
+            margin-right: 5%;
         }
-
+    
         &__text {
-            color: $primary-color;
+            color: var(--primary_color);
             text-align: start;
             margin-top: -25vw;
-
+            margin-right: 0;
+    
             h1 {
                 font-size: 3em;
-                font-weight: normal;
+                font-weight: 600;
             }
-
+    
             p {
                 font-size: 30px;
                 margin-bottom: 10vh;
             }
         }
-
+    
         &__button {
             font-size: 24px;
-            background-color: $tertiary-color;
+            background-color: var(--tertiary_color);
             padding: 15px 20px;
             border-radius: 10px;
             margin-top: 20vh;
+
+            &:hover {
+                //border: dimgrey solid 2px;
+                background-color: transparent;
+                color: var(--tertiary_color);
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            }
+            
         }
         
         &__headphone {
@@ -170,7 +196,7 @@ a {
             right: -4%;
             top: 25%;
         } 
-
+    
         &__design2 {
             position: absolute;
             width: 40vw;
@@ -182,11 +208,11 @@ a {
             left: 80%;
             bottom: 0%;
             z-index: -5;
-
         }
     }
 }
 
+//css properties for laptop sites( 870 px and below 1280px)
 @media screen and (min-width: $laptop) {
 
     .container {
@@ -198,7 +224,7 @@ a {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        color: $primary-color;
+        color: var(--primary_color);
         height: 10%;
         margin: 2% 5%;
 
@@ -255,13 +281,14 @@ a {
         }
 
         &__text {
-            color: $primary-color;
+            color: var(--primary_color);
             text-align: start;
             margin-top: -15vw;
+            margin-right: 10vw;
 
             h1 {
                 font-size: 2.5em;
-                font-weight: normal;
+                font-weight: bold;
             }
 
             p {
@@ -272,33 +299,61 @@ a {
 
         &__button {
             font-size: 24px;
-            background-color: $tertiary-color;
+            background-color: var(--tertiary_color);
             padding: 15px 20px;
             border-radius: 10px;
             margin-top: 20vh;
         }
         
-       /* &__headphone {
+        &__headphone {
             position: absolute;
             background-image: url(../assets/Ellipse3.png);
-            width: 40vw;
-            height: 40vh;
+            width: 35vw;
+            height: 35vh;
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
             z-index: -1;
             right: 0%;
-        } */
+            top: 25%;
+            left: 68%;
+        }
+        
+        &__design1 {
+            position: absolute;
+            background-image: url(../assets/Ellipse2.svg);
+            width: 50vw;
+            height: 25vh;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -2;
+            margin-top: -20vh;
+            margin-left: -2%;
+        }
+
+        &__design2 {
+            position: absolute;
+            width: 40vw;
+            height: 50vh;
+            background: url(../assets/Ellipse4.svg) no-repeat;
+            background-size: contain;
+            justify-content: end;
+            right: -17%;
+            bottom: 0%;
+            z-index: -5;
+        }
     }
 }
 
+//css propertiea for tablet/Ipad (screen size above 572px and below 870px)
 @media screen and (max-width: $tablet) {
     .header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        color: $primary-color;
+        color: var(--primary_color);
         height: 10%;
         margin: 5px 10px;
         //gap: 40px;
@@ -354,7 +409,7 @@ a {
             align-items: center;
             margin-top: 20%;
             text-align: center;
-            color: $primary-color;
+            color: var(--primary_color);
 
             h1 {
                 font-size: 45px;
@@ -369,7 +424,7 @@ a {
 
             a {
                 font-size: 20px;
-                background-color: $tertiary-color;
+                background-color: var(--tertiary_color);
                 padding: 15px 20px;
                 border-radius: 10px;
             }
@@ -388,9 +443,37 @@ a {
             background-repeat: no-repeat;
             filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.50));
         }
+
+        &__headphone {
+            background-image: url(../assets/Ellipse3.png); 
+            position: absolute;
+            width: 40vw;
+            height: 40vh;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -2;
+            top: 6vh;
+            left: 60vw;
+        }
+
+        &__design1 {
+            background-image: url(../assets/Ellipse2.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 120vw;
+            height: 16vh;
+            margin: 0;
+            left: -2%;
+            bottom: -1%;
+            z-index: -2;
+        }
     }
 }
 
+//css properties for mobile screens below 572px
 @media screen and (max-width: $mobile) {
 
     .header {
@@ -406,6 +489,7 @@ a {
         }
 
         &__menuicon {
+            visibility: visible;
             display: flex;
             margin-right: 10px;
         }   
@@ -416,15 +500,42 @@ a {
             display: flex;
             background-image: url(../assets/landing-page-girl_1.png);
             width: 70vw;
-            height: 95vh;
-            margin-top: -13vh;
-            margin-bottom: -2vh;
+            height: 70vh;
+            //margin-top: -13vh;
+            bottom: 0%;
             justify-content: center;
             align-items: center;
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
             filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.50));
+        }
+
+        &__headphone {
+            background-image: url(../assets/Ellipse3.png); 
+            position: absolute;
+            width: 45vw;
+            height: 45vh;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -2;
+            top: 2vh;
+            left: 55vw;
+        }
+
+        &__design1 {
+            background-image: url(../assets/Ellipse2.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 115vw;
+            height: 15vh;
+            margin: 0;
+            left: -2%;
+            bottom: -3%;
+            z-index: -2;
         }
     }
 }

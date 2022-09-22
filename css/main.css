@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;0,900;1,400&display=swap");
+:root {
+  --background_color: #1762A7;
+  --primary_color: #ffffff ;
+  --main_color: #0a80ef ;
+  --tertiary_color: #000000;
+}
+
 * {
   margin: 0px 5px;
   padding: 0px;
@@ -8,7 +15,7 @@
 }
 
 body {
-  background-color: #1762A7;
+  background-color: var(--background_color);
   overflow: hidden;
 }
 
@@ -23,10 +30,10 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--primary_color);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   body {
     display: grid;
     place-content: center;
@@ -41,10 +48,10 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
+    color: var(--primary_color);
     max-width: 1920px;
     height: 10%;
-    margin: 2% 5%;
+    margin: 2%;
   }
   .header__logo {
     display: flex;
@@ -68,6 +75,9 @@ a {
   .header__navigation ul li {
     list-style: none;
     gap: 5px;
+  }
+  .header__navigation ul li a:hover {
+    color: var(--tertiary_color);
   }
   .hero {
     margin: 0%;
@@ -96,27 +106,28 @@ a {
   .hero__design1 {
     position: absolute;
     background-image: url(../assets/Ellipse2.svg);
-    width: 80vw;
+    width: 70vw;
     height: 25vh;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -2;
     margin-top: -20vh;
-    margin-left: -23vw;
+    left: -5%;
   }
   .hero__right {
     margin-left: 0%;
-    margin-right: 11%;
+    margin-right: 5%;
   }
   .hero__text {
-    color: #ffffff;
+    color: var(--primary_color);
     text-align: start;
     margin-top: -25vw;
+    margin-right: 0;
   }
   .hero__text h1 {
     font-size: 3em;
-    font-weight: normal;
+    font-weight: 600;
   }
   .hero__text p {
     font-size: 30px;
@@ -124,10 +135,15 @@ a {
   }
   .hero__button {
     font-size: 24px;
-    background-color: #000000;
+    background-color: var(--tertiary_color);
     padding: 15px 20px;
     border-radius: 10px;
     margin-top: 20vh;
+  }
+  .hero__button:hover {
+    background-color: transparent;
+    color: var(--tertiary_color);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
   .hero__headphone {
     position: absolute;
@@ -164,7 +180,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
+    color: var(--primary_color);
     height: 10%;
     margin: 2% 5%;
   }
@@ -192,17 +208,6 @@ a {
   }
   .hero {
     margin: 0%;
-    /* &__headphone {
-         position: absolute;
-         background-image: url(../assets/Ellipse3.png);
-         width: 40vw;
-         height: 40vh;
-         background-repeat: no-repeat;
-         background-position: center;
-         background-size: contain;
-         z-index: -1;
-         right: 0%;
-     } */
   }
   .hero__container {
     display: flex;
@@ -222,13 +227,14 @@ a {
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.5));
   }
   .hero__text {
-    color: #ffffff;
+    color: var(--primary_color);
     text-align: start;
     margin-top: -15vw;
+    margin-right: 10vw;
   }
   .hero__text h1 {
     font-size: 2.5em;
-    font-weight: normal;
+    font-weight: bold;
   }
   .hero__text p {
     font-size: 30px;
@@ -236,10 +242,46 @@ a {
   }
   .hero__button {
     font-size: 24px;
-    background-color: #000000;
+    background-color: var(--tertiary_color);
     padding: 15px 20px;
     border-radius: 10px;
     margin-top: 20vh;
+  }
+  .hero__headphone {
+    position: absolute;
+    background-image: url(../assets/Ellipse3.png);
+    width: 35vw;
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+    right: 0%;
+    top: 25%;
+    left: 68%;
+  }
+  .hero__design1 {
+    position: absolute;
+    background-image: url(../assets/Ellipse2.svg);
+    width: 50vw;
+    height: 25vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -2;
+    margin-top: -20vh;
+    margin-left: -2%;
+  }
+  .hero__design2 {
+    position: absolute;
+    width: 40vw;
+    height: 50vh;
+    background: url(../assets/Ellipse4.svg) no-repeat;
+    background-size: contain;
+    justify-content: end;
+    right: -17%;
+    bottom: 0%;
+    z-index: -5;
   }
 }
 @media screen and (max-width: 869px) {
@@ -248,7 +290,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
+    color: var(--primary_color);
     height: 10%;
     margin: 5px 10px;
     /* &__navigation {
@@ -296,7 +338,7 @@ a {
     align-items: center;
     margin-top: 20%;
     text-align: center;
-    color: #ffffff;
+    color: var(--primary_color);
   }
   .hero__right h1 {
     font-size: 45px;
@@ -309,7 +351,7 @@ a {
   }
   .hero__right a {
     font-size: 20px;
-    background-color: #000000;
+    background-color: var(--tertiary_color);
     padding: 15px 20px;
     border-radius: 10px;
   }
@@ -327,6 +369,31 @@ a {
     background-repeat: no-repeat;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.5));
   }
+  .hero__headphone {
+    background-image: url(../assets/Ellipse3.png);
+    position: absolute;
+    width: 40vw;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -2;
+    top: 6vh;
+    left: 60vw;
+  }
+  .hero__design1 {
+    background-image: url(../assets/Ellipse2.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 120vw;
+    height: 16vh;
+    margin: 0;
+    left: -2%;
+    bottom: -1%;
+    z-index: -2;
+  }
 }
 @media screen and (max-width: 572px) {
   .header {
@@ -341,6 +408,7 @@ a {
     display: none;
   }
   .header__menuicon {
+    visibility: visible;
     display: flex;
     margin-right: 10px;
   }
@@ -348,14 +416,38 @@ a {
     display: flex;
     background-image: url(../assets/landing-page-girl_1.png);
     width: 70vw;
-    height: 95vh;
-    margin-top: -13vh;
-    margin-bottom: -2vh;
+    height: 70vh;
+    bottom: 0%;
     justify-content: center;
     align-items: center;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.5));
+  }
+  .hero__headphone {
+    background-image: url(../assets/Ellipse3.png);
+    position: absolute;
+    width: 45vw;
+    height: 45vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -2;
+    top: 2vh;
+    left: 55vw;
+  }
+  .hero__design1 {
+    background-image: url(../assets/Ellipse2.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 115vw;
+    height: 15vh;
+    margin: 0;
+    left: -2%;
+    bottom: -3%;
+    z-index: -2;
   }
 }/*# sourceMappingURL=main.css.map */

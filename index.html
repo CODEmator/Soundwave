@@ -14,7 +14,7 @@
             <a class="header__logotxt" href="./index.html">Soundwave</a>
         </div>
         <div class="header__menuicon">
-            <img id="menuCta" //src="./assets/menu_icon.svg" alt="Mobile Menu Icon">
+            <img id="menuCta" src="./assets/menu_icon.svg" alt="Mobile Menu Icon">
         </div>
         
         <nav id="mobileMenu" class="header__hidden header__navigation ">
@@ -46,7 +46,7 @@
         </div>
     </section>
     <script>
-        const mobileBtn = document.getElementById("menuCta");
+        let mobileBtn = document.getElementById("menuCta");
         nav = document.querySelector("nav");
 
         mobileBtn.addEventListener("click", () => {
@@ -54,7 +54,7 @@
             nav.classList.add("menu-btn");
         });
 
-        mobileBtn.addEventListener("dblclick", () => {
+        mobileBtn.addEventListener("click", () => {
             document.getElementById("menuCta").src='./assets/menu_icon.svg'
             nav.classList.remove("menu-btn");
 
