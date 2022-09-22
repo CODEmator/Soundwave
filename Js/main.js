@@ -1,9 +1,20 @@
+    //select img and navigation element
+    const mobileBtn = document.getElementById("menuCta");
+    nav = document.querySelector("nav");
 
+    //toggle variable
+    let toggle = true;
 
-/*function myMenu() {
-    const mobileBtn = document.getElementById("menuCta").src='../assets/Menu-close.svg'
-    nav = document.querySelectorById("mobileMenu")
+    //listen for click events
     mobileBtn.addEventListener("click", () => {
-        nav.classlist.add("menu-btn");
-    })
-}*/
+        //toggle
+        toggle = !toggle;
+        if(toggle){
+            mobileBtn.src = '../assets/Menu-close.svg';
+            nav.classList.add("menu-btn");
+        }
+        else{
+            mobileBtn.src = '../assets/menu_icon.svg'
+            nav.classList.remove("menu-btn");
+        }
+    });

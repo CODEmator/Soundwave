@@ -15,10 +15,19 @@ $tablet  : 869px;
 $laptop  : 870px; 
 $desktop : 1280px;
 
+@keyframes mobileMenu {
+    0%      {background-color: var(--background_color); top: 0%; opacity: 0;}
+    25%     {background-color: #bcbcbd0f;}
+    50%     {background-color: #d7d7d7b1; opacity: 0;}
+    75%     {background-color: #d9e5f0;}
+    100%    {background: var(--primary_color); top: 10%; opacity: 100;}
+}
+
 * { //removed default settings (margin/padding)
-    margin: 0px 5px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
 
     font-family: 'sans-serif', 'Poppins';
     font-size: 30px;
@@ -492,7 +501,52 @@ a {
             visibility: visible;
             display: flex;
             margin-right: 10px;
-        }   
+        } 
+        // navigation menu for mobile
+        nav {
+            position: fixed;
+            z-index: 999;
+            width: 110vw;
+            height: 10vh;
+            right: -2%;
+            top: 10%;
+            background: var(--primary_color);
+            padding: 1em;
+            color: var(--main_color);
+            text-decoration: none;
+            animation-name: mobileMenu;
+            animation-duration: 0.9s;
+          
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 0%;
+                text-decoration: none;
+                list-style: none;
+            }
+          
+            li {
+              a {
+                color: var(--main_color);
+                display: block;
+                text-decoration: none;
+                list-style: none;
+                font-size: 24px;
+                padding: 0.5em;
+                text-align: center;
+          
+                &:hover {
+                  font-weight: bold;
+                }
+              }
+            }
+        }
+
+        nav.menu-btn {
+            display: block;
+        }
     }
 
     .hero {

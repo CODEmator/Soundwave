@@ -6,8 +6,53 @@
   --tertiary_color: #000000;
 }
 
+@-webkit-keyframes mobileMenu {
+  0% {
+    background-color: var(--background_color);
+    top: 0%;
+    opacity: 0;
+  }
+  25% {
+    background-color: rgba(188, 188, 189, 0.0588235294);
+  }
+  50% {
+    background-color: rgba(215, 215, 215, 0.6941176471);
+    opacity: 0;
+  }
+  75% {
+    background-color: #d9e5f0;
+  }
+  100% {
+    background: var(--primary_color);
+    top: 10%;
+    opacity: 100;
+  }
+}
+
+@keyframes mobileMenu {
+  0% {
+    background-color: var(--background_color);
+    top: 0%;
+    opacity: 0;
+  }
+  25% {
+    background-color: rgba(188, 188, 189, 0.0588235294);
+  }
+  50% {
+    background-color: rgba(215, 215, 215, 0.6941176471);
+    opacity: 0;
+  }
+  75% {
+    background-color: #d9e5f0;
+  }
+  100% {
+    background: var(--primary_color);
+    top: 10%;
+    opacity: 100;
+  }
+}
 * {
-  margin: 0px 5px;
+  margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "sans-serif", "Poppins";
@@ -411,6 +456,46 @@ a {
     visibility: visible;
     display: flex;
     margin-right: 10px;
+  }
+  .header nav {
+    position: fixed;
+    z-index: 999;
+    width: 110vw;
+    height: 10vh;
+    right: -2%;
+    top: 10%;
+    background: var(--primary_color);
+    padding: 1em;
+    color: var(--main_color);
+    text-decoration: none;
+    -webkit-animation-name: mobileMenu;
+            animation-name: mobileMenu;
+    -webkit-animation-duration: 0.9s;
+            animation-duration: 0.9s;
+  }
+  .header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    text-decoration: none;
+    list-style: none;
+  }
+  .header nav li a {
+    color: var(--main_color);
+    display: block;
+    text-decoration: none;
+    list-style: none;
+    font-size: 24px;
+    padding: 0.5em;
+    text-align: center;
+  }
+  .header nav li a:hover {
+    font-weight: bold;
+  }
+  .header nav.menu-btn {
+    display: block;
   }
   .hero__image {
     display: flex;
