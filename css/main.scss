@@ -608,6 +608,7 @@ a {
 
     section.add-blur {
         display: block;
+        pointer-events: none;
         filter: blur(4px) opacity(50%) contrast(50%);
         animation-name: mobileMenu;
         animation-duration: 0.7s;
@@ -692,6 +693,8 @@ a {
             }
         }
     }
+
+    //footer styling properties
     footer {
         display: block;
         position: absolute;
@@ -743,5 +746,96 @@ a {
             }
         }
 
+    }
+
+    //scss properties for discover page.
+    .discover {
+        display: block;
+        width: 100vw;
+
+        &__container {
+            margin: 5%;
+            margin-top: 10%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .design3 {
+            position: absolute;
+            z-index: -2;
+            width: 50%;
+            top: -10%;
+            left: -10%;
+        }
+
+        .design4 {
+            position: absolute;
+            z-index: -2;
+            width: 100%;
+            bottom: 30%;
+            left: 10%;
+            right: 10%;
+        }
+
+        .design5 {
+            position: absolute;
+            z-index: -2;
+            width: 110%;
+            height: 20vh;
+            bottom: 0%;
+            left: 20%;
+            right: 0%;
+        }
+
+        .gridbox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 90vw;
+            height: 20%;
+            color: var(--primary_color);
+            margin-top: 10px;
+            gap: 20px;
+
+            .grid {
+                background-color: var(--tertiary_color);
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 25%;
+
+                img {
+                    width: 50px;
+                }
+
+                h2 {
+                    font-size: 24px;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &__text {
+            margin-top: 10px;
+            font-size: 20px;
+
+            span {
+                font-size: 20px;
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+
+        &__imgGrid {
+            margin: 5%;
+            width: 100vw;
+
+            img {
+                width: 80%;
+            }
+        }
     }
 }
