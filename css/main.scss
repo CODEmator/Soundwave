@@ -585,6 +585,75 @@ a {
             }
         }
     }
+
+    .signin {
+        position: absolute;
+        z-index: 999;
+        display: none;
+        width: 110vw;
+        height: 90vh;
+        margin-left: -5%;
+        margin-top: 5%;
+
+        &__container {
+            background-color: var(--primary_color);margin-top: 10%;
+            padding: 3%;
+            border-radius: 20px;
+            margin-top: -5%;
+
+            form {
+                width: 30vw;
+                //margin: 10%;
+
+                label {
+                    font-size: 24px;
+                    color: var(--main_color);
+                }
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 20px;
+                    border-color: var(--main_color);
+                    //border-top: var(--main_color);
+                    border-style: solid;
+                    border-radius: 10px;
+                }
+
+                input[type=submit] {
+                    width: 25%;
+                    margin-left: 37.5%;
+                    font-size: 30px;
+                    background-color: var(--primary_color);
+                    color: var(--main_color);
+
+                    &:hover {
+                        color: var(--primary_color);
+                        background-color: var(--main_color);
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        &__link {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            a {
+                color: var(--main_color);
+                font-size: 20px;
+            }
+        }
+    }
+
+    .show__signin {
+        //display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 //css propertiea for tablet/Ipad (screen size above 572px and below 870px)
@@ -772,12 +841,13 @@ a {
     .join {
         display: block;
         width: 100vw;
+        height: 100vh;
         color: var(--primary_color);
         background: linear-gradient(180deg, #1762A7 31.85%, rgba(0, 0, 0, 1) 90.01%);
 
         &__container {
-            display: flex;
-            flex-direction: column;
+            display: block;
+            //flex-direction: column;
             margin-top: 10%;
         }
 
@@ -795,15 +865,25 @@ a {
         }
 
         &__form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 10%;
+            margin-bottom: -2%;
             background-color: var(--background_color);
             border: var(--tertiary_color);
             border-radius: 10px;
             filter: drop-shadow(0px 8px 8px var(--tertiary_color));
         }
 
+        &__footer {
+            margin-top: 20%;
+        }
+
         form {
-            margin: 5%;
-            width: 90vw;
+            margin: 10%;
+            width: 100%;
             
 
             label {
@@ -833,15 +913,15 @@ a {
                     font-size: 20px;
                     font-style: italic;
 
-                    &:hover {
+                    &:active {
                         color: var(--minor_color);
                     }
                 }
             }
 
             input[type=submit] {
-                width: 50%;
-                margin-left: 25%;
+                width: 30%;
+                margin-left: 35%;
                 background-color: var(--tertiary_color);
                 color: var(--primary_color);
                 border: none;
@@ -853,7 +933,7 @@ a {
     footer {
         display: block;
         //position: absolute;
-        padding: 5%;
+        padding: 2%;
         margin: 0%;
         //margin-top: 15%;
         bottom: 0%;
@@ -909,10 +989,11 @@ a {
     .discover {
         display: block;
         width: 100vw;
+        height: 100vh;
 
         &__container {
-            margin: 5%;
-            margin-top: 10%;
+            //margin: 5%;
+            margin: 10%;
             display: flex;
             flex-direction: column;
         }
@@ -949,7 +1030,7 @@ a {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 90vw;
+            //width: 90%;
             height: 20%;
             color: var(--primary_color);
             margin-top: 10px;
@@ -975,9 +1056,17 @@ a {
             }
         }
 
+        &__left {
+            width: 100%;
+
+            h1 {
+                font-size: 35px;
+            }
+        }
+
         &__text {
             margin-top: 10px;
-            font-size: 30px;
+            font-size: 25px;
             text-align: center;
 
             span {
@@ -988,12 +1077,21 @@ a {
         }
 
         &__imgGrid {
-            margin: 5%;
-            width: 100vw;
+            //margin: 5%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
+                margin-top: 5%;
                 width: 80%;
             }
+        }
+
+        &__footer {
+            margin-top: -5%;
+            padding: 2%;
         }
     }
 }

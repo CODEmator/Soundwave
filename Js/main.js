@@ -21,4 +21,22 @@
             screenBlur.classList.remove("add-blur")
         }
     });
+    
+    function signinBar() {
+         //select login menu button and signin section
+        const loginBtn = document.getElementById("logIn");
+        loginBar = document.getElementById("login__bar");
 
+        let toggle = true;
+
+         //events on login click
+        loginBtn.addEventListener("click", () => {
+            toggle = !toggle;
+             if(toggle){
+                loginBar.classList.add("show__signin");
+            }
+            else{
+                loginBar.classList.remove("show__signin")
+            }
+        });
+    }

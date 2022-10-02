@@ -20,12 +20,12 @@
             <ul>
                 <li><a href="./discover.html">Discover</a></li>
                 <li class="splitline">|</li>
-                <li><a class="login" href="">Login</a></li>
+                <li><a class="login" id="logIn" href="#" onclick="signinBar()">Login</a></li>
                 <li><a class="hero__button" href="./join.html">Join</a></li>
             </ul>
         </nav>
     </div>
-    <section id="blur" class="hero">
+    <div id="blur" class="hero">
         <div class="container hero__container">
             <div class="hero__left">
                 <div class="hero__image"></div>
@@ -42,6 +42,21 @@
                 <div class="hero__headphone"></div>
                 <div class="hero__design2"></div>
             </div>
+        </div>
+    </div>
+    <section class="signin" id="login__Bar">
+        <div class="signin__container">
+            <form action="" method="get">
+                <label for="username">Username:</label><br>
+                <input type="email/username" name="email/username" id="userId" placeholder="email or username"><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" id="userKey" placeholder="********"><br>
+                <div class="signin__link">
+                    <a href="">Join Now</a>
+                    <a href="">Forget Password?</a>
+                </div><br><br>
+                <input type="submit" value="Login">
+            </form>
         </div>
     </section>
     <script src="./Js/main.js"></script>
