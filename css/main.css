@@ -243,6 +243,10 @@ a {
     list-style: none;
     gap: 5px;
   }
+  .header__navigation .login:hover {
+    cursor: pointer;
+    color: var(--tertiary_color);
+  }
   .hero {
     margin: 0%;
   }
@@ -499,9 +503,10 @@ a {
     font-size: 24px;
   }
   .signin {
+    justify-content: center;
+    align-items: center;
     position: absolute;
     z-index: 999;
-    display: none;
     width: 110vw;
     height: 90vh;
     margin-left: -5%;
@@ -551,9 +556,7 @@ a {
     font-size: 20px;
   }
   .show__signin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
   }
 }
 @media screen and (max-width: 869px) {
@@ -966,7 +969,7 @@ a {
     text-decoration: none;
     list-style: none;
   }
-  .header nav li a {
+  .header nav li a, .header nav li .login {
     color: var(--primary_color);
     display: block;
     text-decoration: none;
@@ -975,10 +978,18 @@ a {
     padding: 0.5em;
     text-align: center;
   }
-  .header nav li a:hover {
+  .header nav li a:hover, .header nav li .login:hover {
     font-weight: bold;
+    cursor: pointer;
   }
-  .header nav.menu-btn {
+  .header nav li .login {
+    font-size: 24px;
+  }
+  .header nav li .login:hover {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .header nav nav.menu-btn {
     display: block;
   }
   .hero__image {
