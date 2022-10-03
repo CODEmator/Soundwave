@@ -503,6 +503,8 @@ a {
     font-size: 24px;
   }
   .signin {
+    visibility: hidden;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -555,8 +557,17 @@ a {
     color: var(--main_color);
     font-size: 20px;
   }
-  .show__signin {
+  section.show__signin {
+    visibility: visible;
+  }
+  section.add-blur {
     display: block;
+    pointer-events: none;
+    filter: blur(50px) opacity(50%) contrast(50%);
+    -webkit-animation-name: mobileMenu;
+            animation-name: mobileMenu;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
   }
 }
 @media screen and (max-width: 869px) {
@@ -1219,10 +1230,14 @@ a {
     font-style: italic;
   }
   .discover__imgGrid {
+    display: flex;
     margin: 5%;
     width: 100vw;
+    justify-content: center;
+    align-items: center;
   }
   .discover__imgGrid img {
     width: 80%;
+    margin-right: 20%;
   }
 }/*# sourceMappingURL=main.css.map */

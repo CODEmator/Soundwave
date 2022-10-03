@@ -592,7 +592,8 @@ a {
     }
 
     .signin {
-        //display: none;
+        visibility: hidden;
+        display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
@@ -655,9 +656,17 @@ a {
         }
     }
 
-    .show__signin {
+    section.show__signin {
+        visibility: visible;
+    } 
+    
+    section.add-blur {
         display: block;
-    }   
+        pointer-events: none;
+        filter: blur(50px) opacity(50%) contrast(50%);
+        animation-name: mobileMenu;
+        animation-duration: 0.7s;
+    }
 }
 
 //css propertiea for tablet/Ipad (screen size above 572px and below 870px)
@@ -1453,11 +1462,15 @@ a {
         }
 
         &__imgGrid {
+            display: flex;
             margin: 5%;
             width: 100vw;
+            justify-content: center;
+            align-items: center;
 
             img {
                 width: 80%;
+                margin-right: 20%;
             }
         }
     }
