@@ -1,7 +1,10 @@
     //select img and navigation element
     const mobileBtn = document.getElementById("menuCta");
-    menubar = document.querySelector("nav");
+    const menubar = document.querySelector("nav");
     const screenBlur = document.querySelector("section");
+    //select login menu button and signin section
+    const loginBtn = document.getElementById("logIn");
+    const loginBar = document.querySelector('#login__Bar');
 
     //toggle variable
     let toggle = true;
@@ -22,12 +25,8 @@
         }
     });
     
-    
-    //select login menu button and signin section
-    const loginBtn = document.getElementById("logIn");
-    loginBar = document.querySelector('#login__Bar');
 
-        //events on login click
+    //events on login click
     loginBtn.addEventListener("click", () => {
         toggle = !toggle;
         if(toggle){
@@ -40,3 +39,28 @@
         }
     });
 
+    window.addEventListener("click", function(e) {
+        if (e.target === loginBar) {
+            loginBar.classList.remove("show__signin");
+            screenBlur.classList.remove("add-blur");
+        }
+    })
+
+
+    // //Variable for loin and joinnow button on join page
+    // const signinBtn = document.getElementById("signIn");
+    // signupBtn = document.getElementById("signUp")
+    // joinForm = document.querySelector("#join__Form");
+    // signinForm = document.querySelector("#login__Form"); 
+
+
+    // //events on clicks
+    // signinBtn.addEventListener("click", () => {
+    //     joinForm.classList.add("remove-form");
+    //     signinForm.classList.add("add-form");
+    // });
+
+//    // signupBtn.addEventListener("click", () => {
+//         signinForm.classList.remove("add-form");
+//         joinForm.classList.remove("remove-form");
+//     })
