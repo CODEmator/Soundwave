@@ -1,14 +1,38 @@
-const form = document.getElementById('form');
+const form = document.querySelector('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const createPw = document.getElementById('create_pw');
+const confirmPw = document.getElementById('confirm_pw');
+const createPwShow = document.querySelector(".createShow")
+const confirmPwShow = document.querySelector(".confirmShow")
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     validateInputs();
 });
+
+createPwShow.addEventListener("click", () => {
+    if((createPw.type === "password")) {
+      createPw.type = "text";
+      createPwShow.classList.replace("fa-eye-slash","fa-eye");
+    }
+    else {
+      createPw.type = "password";
+      createPwShow.classList.replace("fa-eye","fa-eye-slash");
+    }
+});
+
+confirmPwShow.addEventListener("click", () => {
+    if((confirmPw.type === "password")) {
+        confirmPw.type = "text";
+        confirmPwShow.classList.replace("fa-eye-slash","fa-eye");
+    }
+    else {
+        confirmPw.type = "password";
+        confirmPwShow.classList.replace("fa-eye","fa-eye-slash");
+    }
+})
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -36,8 +60,8 @@ const isValidEmail = email => {
 const validateInputs = () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
+    const createPwValue = createPw.value.trim();
+    const confirmPValue = confirmPw.value.trim();
 
     if(usernameValue === '') {
         setError(username, 'Username is required');

@@ -441,16 +441,25 @@ a {
   .join__form .input-control input:focus {
     outline: 0%;
   }
+  .join__form .input-control i {
+    position: absolute;
+    margin-top: 1.8%;
+    margin-left: 23.5%;
+    color: #a6a6a6;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+  }
   .join__form .input-control.success input {
     border-color: #09c372;
   }
   .join__form .input-control.error input {
     border-color: #ff3860;
   }
-  .join__form .input-control.error {
+  .join__form .input-control .error {
     color: #ff3860;
-    font-size: 9px;
-    height: 13px;
+    font-size: 12px;
+    height: 16px;
   }
   .join__form input[type=submit] {
     padding: 10px;
@@ -523,6 +532,7 @@ a {
   footer .socialicon img {
     width: 40px;
     padding: 5px;
+    color: var(--primary_color);
   }
   footer p {
     display: flex;
@@ -534,72 +544,124 @@ a {
   footer p span {
     font-size: 24px;
   }
-  .login__form {
-    display: none;
-    z-index: 2;
-    width: 30%;
-    height: 50%;
-    margin-top: 7%;
-    margin-left: 50%;
-  }
-  .login__form input[type=submit] {
-    margin-left: 40%;
-    cursor: pointer;
-  }
   .signin {
-    visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
     position: absolute;
     z-index: 999;
-    width: 110vw;
-    height: 90vh;
+    width: 50vw;
+    height: 110vh;
+    top: 30vh;
+    left: 50vw;
+    transform: translate(-40%, -30%);
     margin-left: -5%;
     margin-top: 5%;
   }
   .signin__container {
+    display: flex;
     background-color: var(--primary_color);
     margin-top: 10%;
     padding: 3%;
     border-radius: 20px;
-    margin-top: -5%;
   }
   .signin__container form {
-    width: 30vw;
+    width: 50%;
   }
   .signin__container form label {
-    font-size: 24px;
-    color: var(--main_color);
+    font-size: 20px;
   }
   .signin__container form input {
-    width: 100%;
-    padding: 10px;
-    font-size: 20px;
-    border-color: var(--main_color);
-    border-style: solid;
+    border: 2px solid #f0f0f0;
     border-radius: 10px;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+  .signin__container form input:focus {
+    outline: 0%;
+  }
+  .signin__container form .input-control.success input {
+    border-color: #09c372;
+  }
+  .signin__container form .input-control.error input {
+    border-color: #ff3860;
+  }
+  .signin__container form .input-control .error {
+    color: #ff3860;
+    font-size: 12px;
+    height: 16px;
   }
   .signin__container form input[type=submit] {
-    width: 25%;
-    margin-left: 37.5%;
-    font-size: 30px;
-    background-color: var(--primary_color);
-    color: var(--main_color);
-  }
-  .signin__container form input[type=submit]:hover {
+    width: 100%;
+    font-size: 24px;
     color: var(--primary_color);
     background-color: var(--main_color);
-    font-size: 30px;
+  }
+  .signin__container form input[type=submit]:hover {
+    letter-spacing: 2px;
+    background-color: var(--primary_color);
+    color: var(--main_color);
+    border-color: var(--main_color);
+  }
+  .signin__container form i {
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 40%;
+    color: #a6a6a6;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
   }
   .signin__link {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
   }
   .signin__link a {
+    color: var(--tertiary_color);
+    font-size: 14px;
+    margin: 5px;
+  }
+  .signin__link a:hover {
+    color: var(--minor_color);
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+  .signin__link2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 5%;
+  }
+  .signin__link2 a {
+    font-size: 16px;
     color: var(--main_color);
-    font-size: 20px;
+  }
+  .signin__link2 a:hover {
+    cursor: pointer;
+    color: var(--minor_color);
+    font-style: italic;
+  }
+  .signin__banner {
+    background-color: var(--form_color);
+    margin: -3.05%;
+    margin-right: 3%;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .signin__banner .login__image {
+    background-image: url(../assets/landing-page-girl_1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 50vh;
+    margin: 0%;
+    margin-top: 16.5%;
+    margin-bottom: -10%;
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.5));
   }
   div.add-form {
     display: block;
@@ -608,7 +670,7 @@ a {
     display: none;
   }
   section.show__signin {
-    visibility: visible;
+    display: block;
   }
   section.add-blur {
     display: block;
@@ -838,10 +900,10 @@ a {
   .join__form .input-control.error input {
     border-color: #ff3860;
   }
-  .join__form .input-control.error {
+  .join__form .input-control .error {
     color: #ff3860;
-    font-size: 9px;
-    height: 13px;
+    font-size: 10px;
+    height: 14px;
   }
   .join__form input[type=submit] {
     padding: 10px;
@@ -851,6 +913,7 @@ a {
     background-color: var(--main_color);
     border: none;
     border-radius: 10px;
+    font-size: 20px;
   }
   .join__form .footnote {
     margin-top: 10%;
@@ -1185,12 +1248,13 @@ a {
   .join__form .input-control.error input {
     border-color: #ff3860;
   }
-  .join__form .input-control.error {
+  .join__form .input-control .error {
     color: #ff3860;
     font-size: 9px;
     height: 13px;
   }
   .join__form input[type=submit] {
+    font-size: 20px;
     padding: 10px;
     margin-top: 10px;
     width: 100%;

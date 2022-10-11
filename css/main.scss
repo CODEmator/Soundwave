@@ -513,21 +513,29 @@ a {
                     }
                 }
 
-                &.success input {
-                    border-color: #09c372;
+                i {
+                    position: absolute;
+                    margin-top: 1.8%;
+                    margin-left: 23.5%;
+                    color: #a6a6a6;
+                    font-size: 20px;
+                    cursor: pointer;
+                    padding: 4px;
                 }
-                
-                &.error input {
-                    border-color: #ff3860;
-                }
-                
-                &.error {
-                    color: #ff3860;
-                    font-size: 9px;
-                    height: 13px;
-                }
+            }
 
-               
+            .input-control.success input {
+                border-color: #09c372;
+            }
+            
+            .input-control.error input {
+                border-color: #ff3860;
+            }
+            
+            .input-control .error {
+                color: #ff3860;
+                font-size: 12px;
+                height: 16px;
             }
 
             input[type=submit] {
@@ -564,6 +572,7 @@ a {
                     span {
                         font-size: 16px;
                         color: var(--main_color);
+
                         &:hover {
                             cursor: pointer;
                             color: var(--minor_color);
@@ -620,6 +629,7 @@ a {
             img {
                 width: 40px;
                 padding: 5px;
+                color: var(--primary_color);
             }
         }
 
@@ -636,73 +646,84 @@ a {
         }
     }
 
-    .login__form {
-        display: none;
-        //position: absolute;
-        z-index: 2;
-        width: 30%;
-        height: 50%;
-        margin-top: 7%;
-        margin-left: 50%;
-
-        input[type=submit] {
-            margin-left: 40%;
-            cursor: pointer;
-        }
-    }
-
     .signin {
-        visibility: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: none;
         position: absolute;
         z-index: 999;
-        width: 110vw;
-        height: 90vh;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%,-50%);
+        width: 50vw;
+        height: 110vh;
+        top: 30vh;
+        left: 50vw;
+        transform: translate(-40%,-30%);
         margin-left: -5%;
         margin-top: 5%;  
 
         &__container {
-            background-color: var(--primary_color);margin-top: 10%;
+            display: flex;
+            background-color: var(--primary_color);
+            margin-top: 10%;
             padding: 3%;
             border-radius: 20px;
-            margin-top: -5%;
+            //margin-top: -5%;
 
             form {
-                width: 30vw;
+                width: 50%;
                 //margin: 10%;
 
                 label {
-                    font-size: 24px;
-                    color: var(--main_color);
+                    font-size: 20px;
                 }
 
                 input {
-                    width: 100%;
-                    padding: 10px;
-                    font-size: 20px;
-                    border-color: var(--main_color);
-                    //border-top: var(--main_color);
-                    border-style: solid;
+                    border: 2px solid #f0f0f0;
                     border-radius: 10px;
+                    display: block;
+                    font-size: 20px;
+                    padding: 10px;
+                    width: 100%;
+
+                    &:focus {
+                        outline: 0%;
+                    }
+                }
+
+                .input-control.success input {
+                    border-color: #09c372;
+                }
+                
+                .input-control.error input {
+                    border-color: #ff3860;
+                }
+                
+                .input-control .error {
+                    color: #ff3860;
+                    font-size: 12px;
+                    height: 16px;
                 }
 
                 input[type=submit] {
-                    width: 25%;
-                    margin-left: 37.5%;
-                    font-size: 30px;
-                    background-color: var(--primary_color);
-                    color: var(--main_color);
+                    width: 100%;
+                    font-size: 24px;
+                    color: var(--primary_color);
+                    background-color: var(--main_color);
+                    
 
                     &:hover {
-                        color: var(--primary_color);
-                        background-color: var(--main_color);
-                        font-size: 30px;
+                        letter-spacing: 2px;
+                        background-color: var(--primary_color);
+                        color: var(--main_color);
+                        border-color: var(--main_color);
                     }
+                }
+
+                i {
+                    position: absolute;
+                    margin-top: -4%;
+                    margin-left: 40%;
+                    color: #a6a6a6;
+                    font-size: 20px;
+                    cursor: pointer;
+                    padding: 4px;
                 }
             }
         }
@@ -710,11 +731,61 @@ a {
         &__link {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: left;
+            align-items: center;
+            text-align: center;
             
             a {
+                color: var(--tertiary_color);
+                font-size: 14px;
+                margin: 5px;
+
+                &:hover {
+                    color: var(--minor_color);
+                    letter-spacing: 1px;
+                    font-style: italic;
+                }
+            }
+        }
+
+        &__link2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            margin-top: 5%;
+
+            a {
+                font-size: 16px;
                 color: var(--main_color);
-                font-size: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: var(--minor_color);
+                    font-style: italic;
+                }
+            }
+            
+        }
+
+        &__banner {
+            background-color: var(--form_color);
+            margin: -3.05%;
+            margin-right: 3%;
+            border-radius: 20px 0px 0px 20px;
+            //width: 100%;
+
+            .login__image {
+                background-image: url(../assets/landing-page-girl_1.png);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 25vw;
+                height: 50vh;
+                margin: 0%;
+                margin-top: 16.5%;
+                margin-bottom: -10%;
+                filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.50));
             }
         }
     }
@@ -728,7 +799,7 @@ a {
     }
 
     section.show__signin {
-        visibility: visible;
+        display: block;
     } 
     
     section.add-blur {
@@ -993,23 +1064,21 @@ a {
                     &:focus {
                         outline: 0%;
                     }
-                }
+                }  
+            }
 
-                &.success input {
-                    border-color: #09c372;
-                }
-                
-                &.error input {
-                    border-color: #ff3860;
-                }
-                
-                &.error {
-                    color: #ff3860;
-                    font-size: 9px;
-                    height: 13px;
-                }
-
-                
+            .input-control.success input {
+                border-color: #09c372;
+            }
+            
+            .input-control.error input {
+                border-color: #ff3860;
+            }
+            
+            .input-control .error {
+                color: #ff3860;
+                font-size: 10px;
+                height: 14px;
             }
 
             input[type=submit] {
@@ -1020,6 +1089,7 @@ a {
                 background-color: var(--main_color);
                 border: none;
                 border-radius: 10px;
+                font-size: 20px;
             }
 
             .footnote {
@@ -1423,26 +1493,25 @@ a {
                     &:focus {
                         outline: 0%;
                     }
-                }
+                } 
+            }
 
-                &.success input {
-                    border-color: #09c372;
-                }
-                
-                &.error input {
-                    border-color: #ff3860;
-                }
-                
-                &.error {
-                    color: #ff3860;
-                    font-size: 9px;
-                    height: 13px;
-                }
-
-                
+            .input-control.success input {
+                border-color: #09c372;
+            }
+            
+            .input-control.error input {
+                border-color: #ff3860;
+            }
+            
+            .input-control .error {
+                color: #ff3860;
+                font-size: 9px;
+                height: 13px;
             }
 
             input[type=submit] {
+                font-size: 20px;
                 padding: 10px;
                 margin-top: 10px;
                 width: 100%;
