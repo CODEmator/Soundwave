@@ -46,8 +46,6 @@
 body {
   background-color: var(--background_color);
   overflow: hidden;
-  width: 100vw;
-  height: 100vh;
 }
 
 .blureffect {
@@ -1085,6 +1083,8 @@ a {
 @media screen and (max-width: 572px) {
   body {
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
   }
   .header {
     display: flex;

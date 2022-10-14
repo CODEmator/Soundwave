@@ -40,8 +40,6 @@ $desktop : 1280px;
 body {
     background-color: var(--background_color);
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
 }
 
 .blureffect {
@@ -1308,6 +1306,8 @@ a {
 @media screen and (max-width: $mobile) {
     body {
         overflow: hidden;
+        width: 100vw;
+        height: 100vh;
     }
     //css properties for header section
     .header {
