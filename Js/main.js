@@ -30,12 +30,14 @@
     loginBtn.addEventListener("click", () => {
         toggle = !toggle;
         if(toggle){
-            loginBar.classList.add("show__signin");
-            screenBlur.classList.add("add-blur");
+            loginBar.classList.remove("show__signin");
+            screenBlur.classList.remove("add-blur");  
         }
         else{
-            loginBar.classList.remove("show__signin");
-            screenBlur.classList.remove("add-blur");
+            loginBar.classList.add("show__signin");
+            screenBlur.classList.add("add-blur");
+            menubar.classList.remove("menu-btn");
+            mobileBtn.src = '../assets/menu_icon.svg';
         }
     });
 
