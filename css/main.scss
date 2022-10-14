@@ -1448,7 +1448,7 @@ a {
         &__container {
             display: flex;
             flex-direction: column;
-            margin-top: 3%;
+            margin-top: 1%;
         }
 
         &__text {
@@ -1494,6 +1494,16 @@ a {
                         outline: 0%;
                     }
                 } 
+
+                i {
+                    position: absolute;
+                    margin-top: 7.5%;
+                    margin-left: 75.5%;
+                    color: #a6a6a6;
+                    font-size: 20px;
+                    cursor: pointer;
+                    padding: 4px;
+                }
             }
 
             .input-control.success input {

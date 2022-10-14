@@ -1203,7 +1203,7 @@ a {
   .join__container {
     display: flex;
     flex-direction: column;
-    margin-top: 3%;
+    margin-top: 1%;
   }
   .join__text {
     margin: 5%;
@@ -1241,6 +1241,15 @@ a {
   }
   .join__form .input-control input:focus {
     outline: 0%;
+  }
+  .join__form .input-control i {
+    position: absolute;
+    margin-top: 7.5%;
+    margin-left: 75.5%;
+    color: #a6a6a6;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
   }
   .join__form .input-control.success input {
     border-color: #09c372;
