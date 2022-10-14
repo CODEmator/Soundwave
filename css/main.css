@@ -1201,7 +1201,7 @@ a {
   .signin__container {
     display: flex;
     background-color: var(--primary_color);
-    margin-top: 10%;
+    margin-top: 5%;
     padding: 3%;
     border-radius: 20px;
   }
@@ -1247,8 +1247,8 @@ a {
   }
   .signin__container form i {
     position: absolute;
-    margin-top: -4%;
-    margin-left: 40%;
+    margin-top: -9%;
+    margin-left: 82%;
     color: #a6a6a6;
     font-size: 20px;
     cursor: pointer;

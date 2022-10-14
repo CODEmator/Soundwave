@@ -22,6 +22,7 @@
             mobileBtn.src = '../assets/menu_icon.svg'
             menubar.classList.remove("menu-btn");
             screenBlur.classList.remove("add-blur");
+            loginBar.classList.remove("show__signin");
         }
     });
     
